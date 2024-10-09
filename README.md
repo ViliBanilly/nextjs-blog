@@ -1,3 +1,4 @@
-### NextJS Blog
+### Chinchilla Blog
 
-A simple blog using NextJS and Markdown.
+A blog using **NextJS**, **TypeScript**, **CSS Modules**.
+Content managed with mark-down (.md) files using the File System as API.

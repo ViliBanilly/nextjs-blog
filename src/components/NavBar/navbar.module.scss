@@ -1,0 +1,61 @@
+.container {
+  max-width: 36rem;
+  padding: 0 1rem;
+  margin: 2rem auto 0rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  button {
+    background: none;
+    border: 0;
+  }
+}
+
+.logo {
+  margin-block-end: 20px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  a {
+    padding: 10px;
+  }
+}
+
+.backToHome {
+  margin: 3rem 0 0;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  align-self: flex-end;
+  cursor: pointer;
+  padding: 0;
+}
+
+.iconLight {
+  width: 24px;
+  height: 24px;
+  fill: black;
+  transition: fill .35s;
+  &:hover {
+    fill: var(--primary);
+  }
+}
+
+.iconDark {
+  width: 24px;
+  height: 24px;
+  fill: white;
+  transition: fill .35s;
+  &:hover {
+    fill: var(--primary);
+  }
+}
