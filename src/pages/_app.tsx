@@ -4,17 +4,16 @@ import '@/styles/global.css';
 
 export default function App({ Component, pageProps }: any) {
   const [darkMode, setDarkMode] = useState(false);
-  // check and reset theme when `darkMode` changes
+  
   useEffect(() => {
     themeCheck();
   }, [darkMode]);
 
-  // check theme on component mount
   useEffect(() => {
+    localStorage.setItem('theme', 'light');
     themeCheck();
   }, []);
 
-  // check and reset theme
   const themeCheck = () => {
     if (
       localStorage.theme === 'dark' ||

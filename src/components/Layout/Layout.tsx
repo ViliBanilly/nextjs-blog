@@ -1,9 +1,6 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import styles from './layout.module.scss';
 import Link from 'next/link';
-import Sun from './icons/Sun';
-import Moon from './icons/Moon';
 
 type LayoutProps = {
   children: React.ReactNode;

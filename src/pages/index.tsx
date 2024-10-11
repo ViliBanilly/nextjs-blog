@@ -17,11 +17,9 @@ export async function getStaticProps() {
 
 type HomeProps = {
   allPostsData: PostItemDataprops[];
-  darkMode: boolean;
-  setDarkMode: () => void;
 };
 
-export default function Home({ allPostsData, darkMode, setDarkMode }: HomeProps) {
+export default function Home({ allPostsData }: HomeProps) {
   return (
     <Layout home>
       <section className={utilStyles.headingMd}>
@@ -34,7 +32,7 @@ export default function Home({ allPostsData, darkMode, setDarkMode }: HomeProps)
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
-          {allPostsData.map((props: PostItemDataprops) => (
+          {allPostsData.map((props) => (
             <PostItem {...props} key={props.id} />
           ))}
         </ul>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { usePathname } from 'next/navigation'
 import Image from 'next/image';
 import Sun from './icons/Sun';
 import Moon from './icons/Moon';
@@ -11,6 +12,7 @@ export type NavBarProps = {
 };
 
 function NavBar({ darkMode, setDarkMode }: any) {
+  const pathname = usePathname()
   const toggleTheme = () => {
     const theme = localStorage.getItem('theme');
     if (theme) {
@@ -37,8 +39,8 @@ function NavBar({ darkMode, setDarkMode }: any) {
           />
         </Link>
         <ul className={styles.menu}>
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
+          <Link className={`link ${pathname === '/' ? styles.active : ''}`} href="/">Home</Link>
+          <Link className={`link ${pathname === '/about' ? styles.active : ''}`} href="/about">About</Link>
         </ul>
       </header>
     </div>
