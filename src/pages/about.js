@@ -1,7 +1,7 @@
 import Layout from '@/components/Layout/Layout';
 import utilStyles from '../styles/utils.module.css';
 
-export default function About({ allPostsData }) {
+export default function About() {
   return (
     <Layout>
       <section className={utilStyles.headingMd}>

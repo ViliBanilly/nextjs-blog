@@ -4,15 +4,21 @@ import Image from 'next/image';
 import Sun from './icons/Sun';
 import Moon from './icons/Moon';
 import styles from './navbar.module.scss';
+import { useEffect } from 'react';
 
 export type NavBarProps = {
-  id: string;
-  title: string;
-  date: string;
+  darkMode: boolean;
+  setDarkMode: (value: boolean) => void;
 };
 
-function NavBar({ darkMode, setDarkMode }: any) {
+function NavBar({ darkMode, setDarkMode }: NavBarProps) {
+
+  useEffect(() => {
+    console.log('hola');
+  }, []);
+
   const pathname = usePathname()
+  console.log("🚀 ~ NavBar ~ pathname:", pathname)
   const toggleTheme = () => {
     const theme = localStorage.getItem('theme');
     if (theme) {
@@ -24,7 +30,7 @@ function NavBar({ darkMode, setDarkMode }: any) {
   };
   return (
     <div className={styles.container}>
-      <header className={styles.header}>
+      <header className={`${styles.header} ${darkMode ? styles.dark : styles.light}`}>
         <button onClick={toggleTheme} className={styles.icon}>
           {darkMode ? <Moon className={styles.iconDark} /> : <Sun className={styles.iconLight} />}
         </button>

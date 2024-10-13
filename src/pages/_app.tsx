@@ -4,13 +4,14 @@ import '@/styles/global.css';
 
 export default function App({ Component, pageProps }: any) {
   const [darkMode, setDarkMode] = useState(false);
-  
   useEffect(() => {
     themeCheck();
   }, [darkMode]);
 
   useEffect(() => {
-    localStorage.setItem('theme', 'light');
+    if (!localStorage.getItem('theme')) {
+      localStorage.setItem('theme', 'light');
+    }
     themeCheck();
   }, []);
 
