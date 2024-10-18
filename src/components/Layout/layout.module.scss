@@ -31,31 +31,3 @@
 .backToHome {
   margin: 3rem 0 0;
 }
-
-.icon {
-  width: 24px;
-  height: 24px;
-  align-self: flex-end;
-  cursor: pointer;
-  padding: 0;
-}
-
-.iconLight {
-  width: 24px;
-  height: 24px;
-  fill: black;
-  transition: fill .35s;
-  &:hover {
-    fill: var(--primary);
-  }
-}
-
-.iconDark {
-  width: 24px;
-  height: 24px;
-  fill: white;
-  transition: fill .35s;
-  &:hover {
-    fill: var(--primary);
-  }
-}

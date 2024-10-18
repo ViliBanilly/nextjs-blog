@@ -1,12 +1,11 @@
-function Sun({ className }: any) {
+function Sun({ className }: { className: string }) {
   return (
     <svg
       id="fi_17855032"
       viewBox="0 0 64 64"
       xmlns="http://www.w3.org/2000/svg"
       data-name="Layer 1"
-      className={className}
-    >
+      className={className}>
       <g>
         <path d="m32 11.063c-.552 0-1-.448-1-1v-7.063c0-.552.448-1 1-1s1 .448 1 1v7.063c0 .552-.448 1-1 1z"></path>
         <path d="m47.511 17.489c-.256 0-.512-.098-.707-.293-.391-.391-.391-1.023 0-1.414l4.995-4.995c.391-.391 1.023-.391 1.414 0s.391 1.023 0 1.414l-4.995 4.995c-.195.195-.451.293-.707.293z"></path>

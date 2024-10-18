@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import styles from './layout.module.scss';
 import Link from 'next/link';
+import styles from './layout.module.scss';
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -30,7 +30,7 @@ export default function Layout({ children, siteTitle = 'Chinchilla - Blog', home
           <Link href="/">← Back to home</Link>
         </div>
       )}
-      <footer style={{ textAlign:'right', color: 'gray' }}>
+      <footer style={{ textAlign: 'right', color: 'gray' }}>
         <small>© {`${new Date().getFullYear()}`}</small>
       </footer>
     </div>

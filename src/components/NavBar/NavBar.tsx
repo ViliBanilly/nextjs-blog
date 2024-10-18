@@ -1,10 +1,9 @@
 import Link from 'next/link';
-import { usePathname } from 'next/navigation'
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Sun from './icons/Sun';
 import Moon from './icons/Moon';
 import styles from './navbar.module.scss';
-import { useEffect } from 'react';
 
 export type NavBarProps = {
   darkMode: boolean;
@@ -12,13 +11,8 @@ export type NavBarProps = {
 };
 
 function NavBar({ darkMode, setDarkMode }: NavBarProps) {
+  const pathname = usePathname();
 
-  useEffect(() => {
-    console.log('hola');
-  }, []);
-
-  const pathname = usePathname()
-  console.log("🚀 ~ NavBar ~ pathname:", pathname)
   const toggleTheme = () => {
     const theme = localStorage.getItem('theme');
     if (theme) {
@@ -38,15 +32,20 @@ function NavBar({ darkMode, setDarkMode }: NavBarProps) {
           <Image
             priority
             className={styles.logo}
-            src={`/images/chinchilla-logo${darkMode ? '-dark' : ''}.png`}
-            height={250}
-            width={201}
+            // src={`/images/chinchilla-logo${darkMode ? '-dark' : ''}.png`}
+            src="/images/fv-logo.png"
+            height={55}
+            width={165}
             alt="Chinchilla - Teatro"
           />
         </Link>
         <ul className={styles.menu}>
-          <Link className={`link ${pathname === '/' ? styles.active : ''}`} href="/">Home</Link>
-          <Link className={`link ${pathname === '/about' ? styles.active : ''}`} href="/about">About</Link>
+          <Link className={`link ${pathname === '/' ? styles.active : ''}`} href="/">
+            Home
+          </Link>
+          <Link className={`link ${pathname === '/about' ? styles.active : ''}`} href="/about">
+            About
+          </Link>
         </ul>
       </header>
     </div>

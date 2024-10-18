@@ -9,10 +9,6 @@
   flex-direction: column;
   align-items: center;
 
-  button {
-    background: none;
-    border: 0;
-  }
   .menu {
     display: flex;
     flex-direction: row;
@@ -44,38 +40,31 @@
   margin-block-end: 20px;
 }
 
-
-
-
-
 .backToHome {
   margin: 3rem 0 0;
 }
 
 .icon {
+  background: none;
+  padding: 0;
+  border: 0;
   width: 24px;
   height: 24px;
   align-self: flex-end;
   cursor: pointer;
-  padding: 0;
+
+  svg {
+    transition: fill 0.35s;
+    &:hover {
+      fill: var(--primary);
+    }
+  }
 }
 
 .iconLight {
-  width: 24px;
-  height: 24px;
   fill: black;
-  transition: fill .35s;
-  &:hover {
-    fill: var(--primary);
-  }
 }
 
 .iconDark {
-  width: 24px;
-  height: 24px;
   fill: white;
-  transition: fill .35s;
-  &:hover {
-    fill: var(--primary);
-  }
 }

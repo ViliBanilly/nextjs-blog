@@ -1,6 +1,11 @@
 import { useEffect, useState } from 'react';
 import NavBar from '@/components/NavBar/NavBar';
 import '@/styles/global.css';
+import { Afacad } from '@next/font/google';
+
+const afacad = Afacad({
+  subsets: ['latin']
+});
 
 export default function App({ Component, pageProps }: any) {
   const [darkMode, setDarkMode] = useState(false);
@@ -10,7 +15,7 @@ export default function App({ Component, pageProps }: any) {
 
   useEffect(() => {
     if (!localStorage.getItem('theme')) {
-      localStorage.setItem('theme', 'light');
+      localStorage.setItem('theme', 'dark');
     }
     themeCheck();
   }, []);
@@ -28,9 +33,9 @@ export default function App({ Component, pageProps }: any) {
     }
   };
   return (
-    <>
+    <div className={afacad.className}>
       <NavBar darkMode={darkMode} setDarkMode={setDarkMode} />
       <Component {...pageProps} />;
-    </>
+    </div>
   );
 }
