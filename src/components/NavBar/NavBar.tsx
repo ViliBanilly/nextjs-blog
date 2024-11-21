@@ -32,11 +32,10 @@ function NavBar({ darkMode, setDarkMode }: NavBarProps) {
           <Image
             priority
             className={styles.logo}
-            // src={`/images/chinchilla-logo${darkMode ? '-dark' : ''}.png`}
             src="/images/fv-logo.png"
             height={55}
             width={165}
-            alt="Chinchilla - Teatro"
+            alt="FV - Blog"
           />
         </Link>
         <ul className={styles.menu}>

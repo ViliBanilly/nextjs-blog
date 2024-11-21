@@ -8,7 +8,7 @@ type LayoutProps = {
   home?: boolean;
 };
 
-export default function Layout({ children, siteTitle = 'Chinchilla - Blog', home }: LayoutProps) {
+export default function Layout({ children, siteTitle = 'FV - Blog', home }: LayoutProps) {
   return (
     <div className={styles.container}>
       <Head>

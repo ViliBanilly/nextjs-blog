@@ -7,10 +7,10 @@ export default function About() {
       <section className={utilStyles.headingMd}>
         <h2>About</h2>
         <p>
-          Chinchilla Teatro es una productora creada en el 2019, con la idea de impulsar proyectos
-          originales, estéticos, ambiciosos y poco tradicionales. Un laboratorio para horror,
-          comedia, ciencia ficción, animación, arte contemporáneo, así como el documental y la
-          no-ficción.
+          I am a <strong>Front-End developer</strong> with <strong>14 years of experience</strong>{' '}
+          working with multiple technologies in a huge variety of projects on different domains. Due
+          to my strong background on design, my development work embraces outstanding visual balance
+          and attention to detail, combined with top level coding skills using modern technologies.
         </p>
       </section>
     </Layout>

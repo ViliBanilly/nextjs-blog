@@ -1,4 +1,4 @@
-### Chinchilla Blog
+### FV Blog
 
 A simple blog using **NextJS**, **TypeScript**, **CSS Modules**.
 
